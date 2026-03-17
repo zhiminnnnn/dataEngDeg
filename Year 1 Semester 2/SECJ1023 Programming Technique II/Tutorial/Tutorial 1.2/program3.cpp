@@ -14,32 +14,28 @@ using namespace std;
 // !         The operations that the circle should have.
 class Circle{
 	private:
-		int a, b;
+		int x, y;
 	public:
-		int getA();
-		int getB();
-		void setCo(int, int);
+		Circle(int x, int y){
+			this->x = x;
+			this->y = y;
+		}
+		int getX(){
+			return x;
+		}
+		int getY(){
+			return y;
+		}
 };
-
-int Circle::getA(){ return a; }
-
-int Circle::getB(){ return b; }
-
-void Circle::setCo(int x, int y){
-	a = x;
-	b = y;
-}
 
 int main()
 {
 	// ! Task 2: Create a circle object with specified information
-	Circle c1, c2;
-	c1.setCo(1, 2);
-	c2.setCo(3, 4);
+	Circle c1(1,2), c2(3,4);
 
 	// ! Task 3: Calculate the distance and slope between two circle centres
-	double d = sqrt(pow(c2.getA() - c1.getA(), 2) + pow(c2.getB() - c1.getB(), 2));
-	double s = (float) (c2.getB() - c1.getB()) / (c2.getA() - c1.getA());
+	double d = sqrt(pow(c2.getX() - c1.getX(), 2) + pow(c2.getY() - c1.getY(), 2));
+	double s = (double) (c2.getY() - c1.getY()) / (c2.getX() - c1.getX());
 
 	// ! Task 4: Display the distance and slope between two circle centres
 	cout << fixed << setprecision(2);
