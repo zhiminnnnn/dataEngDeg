@@ -39,7 +39,7 @@ int main()
 
 	// ! Task 3: Calculate the distance and slope between two circle centres
 	double d = sqrt(pow(c2.getA() - c1.getA(), 2) + pow(c2.getB() - c1.getB(), 2));
-	double s = (c2.getB() - c1.getB()) / (c2.getA() - c1.getA());
+	double s = (float) (c2.getB() - c1.getB()) / (c2.getA() - c1.getA());
 
 	// ! Task 4: Display the distance and slope between two circle centres
 	cout << fixed << setprecision(2);
