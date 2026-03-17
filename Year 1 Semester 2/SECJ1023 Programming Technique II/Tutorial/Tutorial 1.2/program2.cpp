@@ -21,7 +21,7 @@ double dis(Circle c1, Circle c2){
 
 // ! Task 3: Define a function to calculate the slope between two circle centres.
 double slp(Circle c1, Circle c2){
-	return (c2.b - c1.b) / (c2.a - c1.a);
+	return (float) (c2.b - c1.b) / (c2.a - c1.a);
 }
 
 int main()
